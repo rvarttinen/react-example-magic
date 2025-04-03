@@ -27,7 +27,7 @@ npm install react-dom@18
 ```
 At time of writing the current version is 18.3.1
 
-In order to run this simple exampl yoo need the [BlueprintJS](https://blueprintjs.com/docs/#core) library. 
+In order to run this simple exampl yuo need the [BlueprintJS](https://blueprintjs.com/docs/#core) library. 
 ```
 npm install @blueprintjs/core
 ```
