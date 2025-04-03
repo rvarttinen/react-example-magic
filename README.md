@@ -3,6 +3,36 @@ A simple example of using the React framework for displaying data produced by th
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Reacy version and dependecies
+It was discovered early on that the latest version of REact, 19, is not compatible with many libraries we want tio use. 
+
+To check version of your installed React: 
+
+```
+npm list react
+```
+
+If it is a version higher than 18 uninstalling the current version is done by: 
+
+```
+npm uninstall react
+npn unnstall react-dom
+```
+
+Installing the previous version, 18:
+
+```
+npm install react@18
+npm install react-dom@17
+```
+At time of writing the current version is 18.3.1
+
+In order to run this simple exampl yoo need the [BlueprintJS](https://blueprintjs.com/docs/#core) library. 
+```
+npm install @blueprintjs/core
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
