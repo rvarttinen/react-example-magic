@@ -107,7 +107,7 @@ function App() {
             placeholder="Enter magic key..."
             value={searchKey}
             onChange={(e) => setSearchKey(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyPress}
             disabled={loading}
           />
           <button 
