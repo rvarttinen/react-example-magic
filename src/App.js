@@ -37,7 +37,7 @@ function App() {
         setAllKeys([]);
       }
     } catch (err) {
-      setError('Failed to fetch available keys');
+    //  setError('Failed to fetch available keys'); // Only set error for actual failures
       console.error('Error fetching all keys:', err);
       setAllKeys([]);
     } finally {
@@ -130,7 +130,7 @@ function App() {
         </div>
 
         {/* Error Display */}
-        {error && (
+        {error && allKeys.length > 0 && (
           <div className="error-message">
             <p>{error}</p>
           </div>
@@ -162,6 +162,13 @@ function App() {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Remove error display for no keys */}
+        {!searchResult && !loading && allKeys.length === 0 && (
+          <div className="all-keys">
+            {/* Intentionally left blank */}
           </div>
         )}
 
