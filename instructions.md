@@ -1,5 +1,9 @@
 # Instructions
 
+> **⚠️ MACHINE CONSUMPTION ONLY** ⚠️
+> 
+> This instructions file is designed for AI assistants and automated tools to produce comprehensive and awesome code solutions in this repository. It contains detailed guidelines, standards, and specifications that should be followed when developing features, writing tests, and maintaining code quality.
+
 ## Code Formatting & Style
 - Use consistent indentation (2 spaces for JavaScript/JSX)
 - Follow ESLint and Prettier configurations if present
@@ -74,3 +78,66 @@
 - Use semantic HTML elements
 - Implement proper loading states
 - Add meaningful error messages for users
+
+## Specifications Logging & Execution
+
+### Specifications File Management
+- **File Location**: Create and maintain a `specifications.md` file in the root directory
+- **Purpose**: Log all development specifications, requirements, and implementation details for future reference and re-execution
+
+### When Adding New Specifications
+1. **Create the specifications file** if it doesn't exist
+2. **Add a new entry** with the following format:
+   ```
+   ## [Feature/Component Name] - [Date]
+   
+   **Description**: Brief description of what needs to be implemented
+   
+   **Requirements**:
+   - [ ] Requirement 1
+   - [ ] Requirement 2
+   - [ ] Requirement 3
+   
+   **Technical Details**:
+   - Component structure
+   - State management approach
+   - API integrations
+   - Performance considerations
+   
+   **Testing Strategy**:
+   - Unit test coverage
+   - Integration test scenarios
+   - User acceptance criteria
+   
+   **Dependencies**:
+   - External packages
+   - Internal components
+   - Environment requirements
+   
+   **Implementation Notes**:
+   - Key decisions made
+   - Alternative approaches considered
+   - Performance optimizations applied
+   
+   **Status**: [Not Started | In Progress | Completed | Testing | Deployed]
+   ```
+
+### Specifications File Structure
+- **Chronological Order**: Newest specifications at the top
+- **Status Tracking**: Update status as work progresses
+- **Cross-References**: Link related specifications and components
+- **Version History**: Include commit hashes and deployment information
+
+### Execution Guidelines
+- **Reference First**: Always check existing specifications before starting new work
+- **Update Status**: Keep specifications current as work progresses
+- **Document Decisions**: Record important technical decisions and their rationale
+- **Link Implementation**: Connect specifications to actual code commits
+- **Review & Refine**: Periodically review and update specifications for accuracy
+
+### Benefits of Specifications Logging
+- **Reusability**: Execute similar features consistently
+- **Knowledge Transfer**: New team members can understand implementation patterns
+- **Quality Assurance**: Ensure all requirements are met systematically
+- **Maintenance**: Track what was built and why decisions were made
+- **Scalability**: Build upon previous work with clear documentation
