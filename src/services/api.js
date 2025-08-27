@@ -24,7 +24,6 @@ export const fetchMagicByKey = async (key) => {
     }
 
     const data = await response.json();
-    console.log('API Response for key:', key, data);
     return data;
   } catch (error) {
     console.error('Error fetching magic by key:', error);
@@ -50,18 +49,6 @@ export const fetchAllMagicKeys = async () => {
     }
 
     const data = await response.json();
-    console.log('API Response for all keys:', data);
-    
-    // Log the structure to help debug
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Response type:', typeof data);
-      console.log('Is array:', Array.isArray(data));
-      if (data && typeof data === 'object') {
-        console.log('Object keys:', Object.keys(data));
-        console.log('Response structure:', data);
-      }
-    }
-    
     return data;
   } catch (error) {
     console.error('Error fetching all magic keys:', error);
@@ -77,12 +64,13 @@ export const fetchAllMagicKeys = async () => {
  */
 export const apiRequest = async (endpoint, options = {}) => {
   try {
+    const { headers, ...otherOptions } = options;
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers,
+        ...headers,
       },
-      ...options,
+      ...otherOptions,
     });
 
     if (!response.ok) {
@@ -90,7 +78,6 @@ export const apiRequest = async (endpoint, options = {}) => {
     }
 
     const data = await response.json();
-    console.log('Generic API Response:', endpoint, data);
     return data;
   } catch (error) {
     console.error('API request error:', error);
